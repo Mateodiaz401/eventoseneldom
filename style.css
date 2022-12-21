@@ -1,0 +1,28 @@
+body {
+    font-family: Verdana, sans-serif;
+}
+
+header,
+nav,
+section,
+article,
+footer {
+    border: 1px solid grey;
+    margin: 5px;
+    padding: 5px;
+}
+
+.border-grey {
+    border: 1px solid grey;
+}
+
+nav ul li {
+    display: inline;
+    pad: 5px;
+}
+
+h1,
+h2,
+h3 {
+    margin-left: 5px;
+}
