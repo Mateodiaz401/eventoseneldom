@@ -50,3 +50,28 @@ const enviarFormulario = (event) => {
 form.addEventListener('submit', enviarFormulario);
 
 ```
+
+### Event BUBBLING
+
+1.CAPTURING
+2.TARGET
+3.BUBBLING (NO SIEMPRE)
+
+```mermaid
+graph TD;
+     A[html] -- 1.CAPTURING --> B((body))
+     A[html]-->B[body]
+     B[html] -- 3.BUBBLING --> A((body))
+
+     B[body] --> C[header];
+     C[header] --> F[H1]
+     B[body] --> D[Nav]
+     B[html] -- 1.CAPTURING --> E((body))
+     B[body] --> E[main]
+     E[main] -- 3.BUBLING --> B((body))
+     E[main] -- 1.CAPTURING--> G((section))
+     E[main] --> G[section]
+     G[section] -- 3. BUBLING --> E((main))
+     G-- 2.TARGET --> G
+
+```

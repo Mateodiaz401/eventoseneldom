@@ -27,6 +27,9 @@ const enviarFormulario = (event) => {
 
 form.addEventListener('submit', enviarFormulario);
 
+//** Event BUBING
+
+
 
 
 
