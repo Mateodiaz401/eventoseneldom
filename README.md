@@ -31,3 +31,22 @@ este metodo nos indica que la carga del html del navegador a cargado
 -   👁️ Ojo 👁️
 
 > Esto no indica que la carga de imagens, videos, ni elementos asociados, si se esta usando defer no es necesario usar este metodo
+
+### Envio de data de un formulario
+
+```sh
+const form = document.querySelector('#formulario');
+
+const enviarFormulario = (event) => {
+    event.preventDefault();
+    //! destructurin
+    const { name, email, password } = event.target;
+    console.log(
+        name.value,
+        email.value,
+        password.value);
+}
+
+form.addEventListener('submit', enviarFormulario);
+
+```
