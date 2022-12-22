@@ -99,4 +99,4 @@ section.addEventListener('click', (e) => {
     });
 ```
 
-> con el captura modificamos el orden en que de ejcute el bubbling
+> Con el captura modificamos el orden en que de ejcute el bubbling
