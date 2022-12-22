@@ -17,6 +17,7 @@ const form = document.querySelector('#formulario');
 
 const enviarFormulario = (event) => {
     event.preventDefault();
+    //console.log(event.bubbles);
     //! destructurin
     const { name, email, password } = event.target;
     console.log(
@@ -27,7 +28,22 @@ const enviarFormulario = (event) => {
 
 form.addEventListener('submit', enviarFormulario);
 
-//** Event BUBING
+//** Event BUBBLING
+const section = document.querySelector('#secction');
+const titulo2 = document.querySelector('#titulo2');
+
+titulo2.addEventListener('click', (e) => {
+    // console.log(e.bubbles, e.cancelBubble = true);
+    // e.stopPropagation
+    console.log('CLICK EN EL TITULO');
+    // console.log(e.target, e.currentTarget);
+});
+section.addEventListener('click', (e) => {
+    console.log('CLICK EN LA SECCIÓN');
+},
+    {
+        capture: true
+    });
 
 
 

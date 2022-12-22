@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 ```
 
-este metodo nos indica que la carga del html del navegador a cargado
+Este metodo nos indica que la carga del html del navegador a cargado
 
 -   👁️ Ojo 👁️
 
@@ -77,3 +77,26 @@ graph TD;
      G-- 2.TARGET --> G
 
 ```
+
+-   ✨Ejemplo✨
+
+```sh
+//** Event BUBBLING
+const section = document.querySelector('#secction');
+const titulo2 = document.querySelector('#titulo2');
+
+titulo2.addEventListener('click', (e) => {
+    // console.log(e.bubbles, e.cancelBubble = true);
+    // e.stopPropagation
+    console.log('CLICK EN EL TITULO');
+    // console.log(e.target, e.currentTarget);
+});
+section.addEventListener('click', (e) => {
+    console.log('CLICK EN LA SECCIÓN');
+},
+    {
+        capture: true
+    });
+```
+
+> con el captura modificamos el orden en que de ejcute el bubbling
