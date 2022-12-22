@@ -54,7 +54,9 @@ form.addEventListener('submit', enviarFormulario);
 ### Event BUBBLING
 
 1.CAPTURING
+
 2.TARGET
+
 3.BUBBLING (NO SIEMPRE)
 
 ```mermaid
